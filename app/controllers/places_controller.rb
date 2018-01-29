@@ -4,4 +4,8 @@ class PlacesController < ApplicationController
     @places = Place.all 
   end
 
+  def index
+    @places = Place.order("name").page(params[:page])
+  end
+
 end
