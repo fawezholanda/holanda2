@@ -105,7 +105,7 @@
 <div class="booyah-box">
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
   <%= f.input :title %>
-  <%= f.input :album %>
+  <%= f.input :picture %>
   <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
 <% end %>
 
@@ -114,10 +114,8 @@
 
 <% @place.photos.each do |photo| %>
   <div>
-    <blockquote>
-      <b><%= photo.title %></b> -
-        <%= photo.album %>
-      <small><%= photo.user.email %></small>
-    </blockquote>
+    <%= image_tag photo.picture %>
+    <%= photo.title %>
+    <%= photo.picture %> 
   </div>
 <% end %>
