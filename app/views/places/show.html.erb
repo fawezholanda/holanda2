@@ -99,3 +99,10 @@
   <% end %>
 </div>
 
+
+<div class="clear"></div>
+<%= simple_form_for @photo, url: '#' do |f| %>
+  <%= f.input :title %>
+  <%= f.input :album %>
+  <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+<% end %>
